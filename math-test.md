@@ -11,3 +11,11 @@
 5. rightarrow-superscript: $e_1 \rightarrow^{r_1} e_2$
 
 6. mathop: $e_1 \mathrel{\mathop{\rightarrow}\limits^{r_1}} e_2$
+
+7. long chain: $e_1 \xrightarrow{r_1} e_2 \xrightarrow{r_2} \cdots \xrightarrow{r_{L-1}} e_L$
+
+8. long chain in Chinese: 得到结构化路径 $e_1 \xrightarrow{r_1} e_2 \xrightarrow{r_2} \cdots \xrightarrow{r_{L-1}} e_L$。
+
+9. L-1 only: $e_1 \xrightarrow{r_{L-1}} e_2$
+
+10. cdots only: $e_1 \xrightarrow{r_1} e_2 \cdots e_L$
