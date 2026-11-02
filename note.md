@@ -48,7 +48,8 @@
 
 2. **检索。** 检索函数 $R$ 按用户请求$q_t$从 $M'$ 中取出 $K$ 条最相关的记忆，记作 $M_r=R(q_t,M',K)$；论文的实验里主记忆和教训库的 top-K 都取 4。
 
-3. **生成并行推理路径。** 对 $M_r$ 中的每条记忆 $m_i$，把它与 $q_t$、当前对话上下文组合，交给函数 $\Lambda$，由**llm模型**先生成一段文本响应，再抽取其中的实体和关系，得到结构化路径 $\hat{\rho}_i=\Lambda(q_t,m_i;\theta)=(e_1 \xrightarrow{r_1} e_2 \xrightarrow{r_2}\cdots\xrightarrow{r_{L-1}} e_L)$。
+3. **生成并行推理路径。** 对 $M_r$ 中的每条记忆 $m_i$，把它与 $q_t$、当前对话上下文组合，交给函数 $\Lambda$，由**llm模型**先生成一段文本响应，再抽取其中的实体和关系，得到结构化路径 $\hat{\rho}_i=\Lambda(q_t,m_i;\theta)=(e_1 \stackrel{r_1}{\rightarrow} e_2 \stackrel{r_2}{\rightarrow}\cdots\stackrel{r_{L-1}}{\rightarrow} e_L)$
+。
 
    ​        这里 $e$ 是实体（邮件、发件人、链接这类对象），$r$ 是关系（核对、优先处理、点开这类动作），整条路径就是“实体1—关系→实体2—关系→实体3”的链条。
 
