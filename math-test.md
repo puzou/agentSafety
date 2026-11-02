@@ -1,21 +1,9 @@
 # Math rendering test
 
-1. xrightarrow: $e_1 \xrightarrow{r_1} e_2$
+11. multiple inline: 对 $M_r$ 中的每条记忆 $m_i$，把它与 $q_t$ 组合，交给 $\Lambda$，得到 $e_1 \xrightarrow{r_1} e_2 \xrightarrow{r_2} \cdots \xrightarrow{r_{L-1}} e_L$。
 
-2. overset: $e_1 \overset{r_1}{\longrightarrow} e_2$
+12. exact note line: 3. **生成并行推理路径。** 对 $M_r$ 中的每条记忆 $m_i$，把它与 $q_t$、当前对话上下文组合，交给函数 $\Lambda$，由 **LLM 模型** 先生成一段文本响应，再抽取其中的实体和关系，得到结构化路径 $\hat{\rho}_i=\Lambda(q_t,m_i;\theta)=(e_1 \xrightarrow{r_1} e_2 \xrightarrow{r_2} \cdots \xrightarrow{r_{L-1}} e_L)$。
 
-3. stackrel: $e_1 \stackrel{r_1}{\rightarrow} e_2$
+13. three inline: 对 $M_r$ 中的 $m_i$，得到 $e_1 \xrightarrow{r_1} e_2 \xrightarrow{r_2} \cdots \xrightarrow{r_{L-1}} e_L$。
 
-4. to-superscript: $e_1 \to^{r_1} e_2$
-
-5. rightarrow-superscript: $e_1 \rightarrow^{r_1} e_2$
-
-6. mathop: $e_1 \mathrel{\mathop{\rightarrow}\limits^{r_1}} e_2$
-
-7. long chain: $e_1 \xrightarrow{r_1} e_2 \xrightarrow{r_2} \cdots \xrightarrow{r_{L-1}} e_L$
-
-8. long chain in Chinese: 得到结构化路径 $e_1 \xrightarrow{r_1} e_2 \xrightarrow{r_2} \cdots \xrightarrow{r_{L-1}} e_L$。
-
-9. L-1 only: $e_1 \xrightarrow{r_{L-1}} e_2$
-
-10. cdots only: $e_1 \xrightarrow{r_1} e_2 \cdots e_L$
+14. long only: $e_1 \xrightarrow{r_1} e_2 \xrightarrow{r_2} \cdots \xrightarrow{r_{L-1}} e_L$
